@@ -1,10 +1,12 @@
 import SlothForm from "../SlothForm/SlothForm";
+import AppStyled from "./AppStyled";
 
 export const App = (): React.ReactElement => {
   return (
-    <div className="app">
-      <SlothForm></SlothForm>
-    </div>
+    <AppStyled className="app">
+      <h1>¡Guarda tus Perezosos!</h1>
+      <SlothForm />
+    </AppStyled>
   );
 };
 

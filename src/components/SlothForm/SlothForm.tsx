@@ -44,34 +44,45 @@ const SlothForm = (): React.ReactElement => {
 
   return (
     <form className="form" autoComplete="off" onSubmit={onFormSubmit}>
-      <div>
-        <label htmlFor="name">Nombre: </label>
+      <div className="form__container">
+        <label className="form__label" htmlFor="name">
+          Nombre:{" "}
+        </label>
         <input
+          className="form__input"
           type="text"
           id="name"
           value={newSloth.name}
           onChange={onChangeData}
         />
       </div>
-      <div>
-        <label htmlFor="picture">URL de la imagen: </label>
+      <div className="form__container">
+        <label className="form__label" htmlFor="picture">
+          URL de la imagen:{" "}
+        </label>
         <input
+          className="form__input"
           type="text"
           id="picture"
           value={newSloth.picture}
           onChange={onChangeData}
         />
       </div>
-      <div>
-        <label htmlFor="fingers">Número de dedos del perezoso: </label>
+      <div className="form__container">
+        <label className="form__label" htmlFor="fingers">
+          Número de dedos del perezoso:{" "}
+        </label>
         <input
+          className="form__input"
           type="text"
           id="fingers"
           value={newSloth.fingers}
           onChange={onChangeData}
         />
       </div>
-      <button type="submit">Crear</button>
+      <button className="button" type="submit">
+        Crear Perezoso
+      </button>
     </form>
   );
 };
