@@ -7,9 +7,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    color: ${({ theme }) => theme.colours.main};
+    font-family: ${({ theme }) => theme.typography.family};
   }
-
+  
   ul,
   li {
     margin: 0;
