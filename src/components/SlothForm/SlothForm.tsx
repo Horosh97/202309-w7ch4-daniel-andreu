@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Sloth } from "../../types";
+import SlothFormStyled from "./SlothFormStyled";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -43,7 +44,11 @@ const SlothForm = (): React.ReactElement => {
   };
 
   return (
-    <form className="form" autoComplete="off" onSubmit={onFormSubmit}>
+    <SlothFormStyled
+      className="form"
+      autoComplete="off"
+      onSubmit={onFormSubmit}
+    >
       <div className="form__container">
         <label className="form__label" htmlFor="name">
           Nombre:{" "}
@@ -83,7 +88,7 @@ const SlothForm = (): React.ReactElement => {
       <button className="button" type="submit">
         Crear Perezoso
       </button>
-    </form>
+    </SlothFormStyled>
   );
 };
 
